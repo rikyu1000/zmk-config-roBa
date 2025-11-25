@@ -1,0 +1,22 @@
+/*
+ * JIS Layout Keycodes for ZMK
+ * Defines mapping for using US-layout ZMK on Windows JIS environment
+ */
+
+#define JP_CARET EQUAL  // ^
+#define JP_AMPS  LS(N6) // &
+#define JP_TILDE LS(EQUAL) // ~
+#define JP_LPAR  LS(N8) // (
+#define JP_RPAR  LS(N9) // )
+#define JP_EXCL  LS(N1) // !
+#define JP_AT    LBKT   // @
+#define JP_HASH  LS(N3) // #
+#define JP_DLLR  LS(N4) // $
+#define JP_PRCNT LS(N5) // %
+#define JP_LBKT  RBKT   // [
+#define JP_RBKT  BSLH   // ]
+#define JP_LBRC  LS(RBKT) // {
+#define JP_RBRC  LS(BSLH) // }
+#define JP_BSLH  INT1   // \ (Ro key)
+#define JP_PIPE  LS(INT3) // | (Yen key)
+#define JP_UNDER LS(INT1) // _
