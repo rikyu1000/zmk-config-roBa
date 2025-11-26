@@ -68,8 +68,8 @@
         };
 
         to_layer_0_ime_off_esc: to_layer_0_ime_off_esc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings = <&to 0 &kp F13 &kp ESC>;
             label = "TO_LAYER_0_IME_OFF_ESC";
         };
@@ -89,7 +89,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0_IME_OFF_ESC";
             bindings = <&mo>, <&to_layer_0_ime_off_esc>;
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
     };
@@ -108,7 +108,7 @@
 &kp Q             &kp W         &kp E      &kp R                          &kp T                                                      &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D      &kp F                          &kp G        &kp LEFT_GUI                   &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                          &kp B        &kp LEFT_ALT                   &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp MINUS  &lt_to_layer_0_ime_off_esc 6  &lt 2 SPACE  &lt_to_layer_0 3 LA(GRAVE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp LCTRL         &kp LEFT_ALT  &kp MINUS  &lt_to_layer_0_ime_off_esc 6 0  &lt 2 SPACE  &lt_to_layer_0 3 LA(GRAVE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
