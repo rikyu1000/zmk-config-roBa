@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &zip_temp_layer {
-    excluded-positions = <18 19 20 34>;
+    excluded-positions = <12 13 18 19 20 34>;
 };
 
 &mt {
