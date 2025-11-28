@@ -1,3 +1,3 @@
 # zmk-config-roBa
 
-<img src="keymap-drawer/roBa.svg" >
+![Keymap](https://github.com/rikyu1000/zmk-config-roBa/blob/keymap-drawer/roBa.svg?raw=true)
