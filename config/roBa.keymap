@@ -116,12 +116,12 @@
 
         snipe {
             layers = <7>;
-            input-processors = <&zip_xy_scaler 1 5>, <&zip_temp_layer 4 100000>;
+            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 1 5>;
         };
 
         scroll {
             layers = <8>;
-            input-processors = <&zip_xy_scaler 3 1>, <&zip_temp_layer 4 100000>;
+            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 3 1>;
         };
     };
 
