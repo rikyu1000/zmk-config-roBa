@@ -105,7 +105,7 @@
             label = "MM_MOUSE_L";
             #binding-cells = <0>;
             bindings = <&mkp MB2>, <&exit_mouse_l>;
-            mods = <(MOD_LCTRL|MOD_RCTRL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 

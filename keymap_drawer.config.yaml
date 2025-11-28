@@ -1,0 +1,6 @@
+parse_config:
+  raw_binding_map:
+    "&mm_mouse_l": "Ctrl+L"
+    "&lt_to_layer_0_ime_off_esc 6 0": "IME Off"
+    "&lt_to_layer_0 3 LC(SPACE)": "IME Toggle"
+    "&to_layer_0 INT_MUHENKAN": "無変換"
