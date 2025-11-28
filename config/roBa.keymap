@@ -1,12 +1,10 @@
-#include <behaviors.dtsi>
 #include <input/processors.dtsi>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&zip_temp_layer {
-    excluded-positions = <12 13 18 19 20 34>;
-};
+&zip_temp_layer { excluded-positions = <12 13 18 19 20 34>; };
 
 &mt {
     flavor = "balanced";
@@ -96,6 +94,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0_IME_OFF_ESC";
             bindings = <&mo>, <&to_layer_0_ime_off_esc>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -105,17 +104,8 @@
             label = "MM_MOUSE_L";
             #binding-cells = <0>;
             bindings = <&mkp MB2>, <&exit_mouse_l>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
 
-        lt_mouse: lt_mouse {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_MOUSE";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <175>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
@@ -126,12 +116,18 @@
 
         snipe {
             layers = <7>;
-            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 1 5>, <&zip_scroll_scaler 1 5>;
+            input-processors =
+                <&zip_temp_layer 4 100000>,
+                <&zip_xy_scaler 1 5>,
+                <&zip_scroll_scaler 1 5>;
         };
 
         scroll {
             layers = <8>;
-            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 3 1>, <&zip_scroll_scaler 3 1>;
+            input-processors =
+                <&zip_temp_layer 4 100000>,
+                <&zip_xy_scaler 3 1>,
+                <&zip_scroll_scaler 3 1>;
         };
     };
 
@@ -140,10 +136,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E      &kp R                          &kp T                                                      &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &lt_mouse 7 D      &lt_mouse 8 F                          &kp G        &kp LEFT_GUI                   &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                          &kp B        &kp LEFT_ALT                   &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp MINUS  &lt_to_layer_0_ime_off_esc 6 0  &lt 2 SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E      &kp R                           &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D      &kp F                           &kp G        &to 9                           &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp B        &kp LEFT_ALT                    &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_to_layer_0_ime_off_esc 6 0  &lt 2 SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -180,10 +176,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mm_mouse_l  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                   &trans
             >;
         };
 
@@ -222,7 +218,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
+
+        Ohnishi {
+            bindings = <
+&kp Q             &kp L         &kp U      &kp COMMA                       &kp PERIOD                                                    &kp F        &kp W  &lt 5 R  &kp Y    &kp P
+&kp E             &kp I         &kp A      &kp O                           &kp SLASH      &to 0                           &kp COLON      &kp K        &kp T  &kp N    &kp S    &mt LEFT_SHIFT H
+&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp SEMICOLON  &kp LEFT_ALT                    &kp APOS       &kp G        &kp D  &kp M    &kp DOT  &kp B
+&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_to_layer_0_ime_off_esc 6 0  &lt 2 SPACE    &lt_to_layer_0 3 LC(SPACE)      &kp BACKSPACE  &lt 1 ENTER                           &kp J
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
     };
 };
-
-
