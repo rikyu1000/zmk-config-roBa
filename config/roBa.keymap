@@ -107,6 +107,16 @@
             bindings = <&mkp MB2>, <&exit_mouse_l>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        lt_mouse: lt_mouse {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_MOUSE";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <175>;
+        };
     };
 
     trackball_listener {
@@ -116,12 +126,12 @@
 
         snipe {
             layers = <7>;
-            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 1 5>;
+            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 1 5>, <&zip_scroll_scaler 1 5>;
         };
 
         scroll {
             layers = <8>;
-            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 3 1>;
+            input-processors = <&zip_temp_layer 4 100000>, <&zip_xy_scaler 3 1>, <&zip_scroll_scaler 3 1>;
         };
     };
 
@@ -131,7 +141,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E      &kp R                          &kp T                                                      &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D      &kp F                          &kp G        &kp LEFT_GUI                   &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
+&kp A             &kp S         &lt_mouse 7 D      &lt_mouse 8 F                          &kp G        &kp LEFT_GUI                   &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                          &kp B        &kp LEFT_ALT                   &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp MINUS  &lt_to_layer_0_ime_off_esc 6 0  &lt 2 SPACE  &lt_to_layer_0 3 LC(SPACE)      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
@@ -172,7 +182,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mm_mouse_l  &trans
-&trans  &trans  &mo 7   &mo 8   &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
