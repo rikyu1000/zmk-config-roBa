@@ -73,6 +73,13 @@
             bindings = <&to 0 &kp F13 &kp ESC>;
             label = "TO_LAYER_0_IME_OFF_ESC";
         };
+
+        exit_mouse_l: exit_mouse_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp L>;
+            label = "EXIT_MOUSE_L";
+        };
     };
 
     behaviors {
@@ -91,6 +98,14 @@
             bindings = <&mo>, <&to_layer_0_ime_off_esc>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        mm_mouse_l: mm_mouse_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_MOUSE_L";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2>, <&exit_mouse_l>;
+            mods = <(MOD_LCTRL|MOD_RCTRL)>;
         };
     };
 
@@ -146,7 +161,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mm_mouse_l  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
