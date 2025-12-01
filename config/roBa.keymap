@@ -85,6 +85,20 @@
             bindings = <&kp F13 &kp ESC>;
             label = "IME_OFF_ESC";
         };
+
+        switch_to_qwerty: switch_to_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp F15>;
+            label = "SWITCH_TO_QWERTY";
+        };
+
+        switch_to_ohnishi: switch_to_ohnishi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &kp F14>;
+            label = "SWITCH_TO_OHNISHI";
+        };
     };
 
     behaviors {
@@ -114,12 +128,10 @@
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-
         lt_mouse: lt_mouse {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_MOUSE";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -130,7 +142,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_IME_OFF_ESC";
             bindings = <&mo>, <&ime_off_esc>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -163,10 +174,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E          &kp R                &kp T                                               &kp Y        &kp U  &lt 6 I    &kp O    &kp P
-&kp A             &kp S         &lt_mouse 8 D  &lt_mouse 9 F        &kp G        &switch_to_ohnishi      &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp B        &kp LEFT_ALT            &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_GUI  &kp MINUS      &lt_ime_off_esc 7 0  &lt 3 SPACE  &lt 4 LC(SPACE)         &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E      &kp R                           &kp T                                                       &kp Y        &kp U  &lt 6 I    &kp O    &kp P
+&kp A             &kp S         &lt_mouse 8 D      &lt_mouse 9 F                           &kp G        &switch_to_ohnishi                           &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp B        &kp LEFT_ALT                    &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_ime_off_esc 7 0  &lt 3 SPACE  &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -174,10 +185,10 @@
 
         Ohnishi {
             bindings = <
-&kp Q             &kp L         &kp U          &kp COMMA            &kp PERIOD                                         &kp F        &kp W  &lt 6 R  &kp Y  &kp P
-&kp E             &kp I         &lt_mouse 8 A  &lt_mouse 9 O        &kp SLASH      &to 0                &kp MINUS      &kp K        &kp T  &kp N    &kp S  &mt LEFT_SHIFT H
-&mt LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp SEMICOLON  &kp LEFT_ALT         &kp APOS       &kp G        &kp D  &kp M    &kp J  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp MINUS      &lt_ime_off_esc 7 0  &lt 3 SPACE    &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                         &kp DELETE
+&kp Q             &kp L         &kp U      &kp COMMA                       &kp PERIOD                                                    &kp F        &kp W  &lt 6 R  &kp Y    &kp P
+&kp E             &kp I         &lt_mouse 8 A      &lt_mouse 9 O                           &kp SLASH      &switch_to_qwerty                           &kp COLON      &kp K        &kp T  &kp N    &kp S    &mt LEFT_SHIFT H
+&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp SEMICOLON  &kp LEFT_ALT                    &kp APOS       &kp G        &kp D  &kp M    &kp DOT  &kp B
+&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_ime_off_esc 7 0  &lt 3 SPACE    &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                           &kp J
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -256,5 +267,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
+
+
     };
 };
