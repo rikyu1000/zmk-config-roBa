@@ -176,8 +176,8 @@
             bindings = <
 &kp Q             &kp W         &kp E      &kp R                           &kp T                                                       &kp Y        &kp U  &lt 6 I    &kp O    &kp P
 &kp A             &kp S         &lt_mouse 8 D      &lt_mouse 9 F                           &kp G        &switch_to_ohnishi                           &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp B        &kp LEFT_ALT                    &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_ime_off_esc 7 0  &lt 3 SPACE  &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
+&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp B        &kp LEFT_ALT                    &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp MINUS
+&kp LCTRL         &kp LEFT_GUI  &kp SLASH  &lt_ime_off_esc 7 0  &lt 3 SPACE  &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -186,9 +186,9 @@
         Ohnishi {
             bindings = <
 &kp Q             &kp L         &kp U      &kp COMMA                       &kp PERIOD                                                    &kp F        &kp W  &lt 6 R  &kp Y    &kp P
-&kp E             &kp I         &lt_mouse 8 A      &lt_mouse 9 O                           &kp SLASH      &switch_to_qwerty                           &kp COLON      &kp K        &kp T  &kp N    &kp S    &mt LEFT_SHIFT H
+&kp E             &kp I         &lt_mouse 8 A      &lt_mouse 9 O                           &kp MINUS      &switch_to_qwerty                           &kp COLON      &kp K        &kp T  &kp N    &kp S    &mt LEFT_SHIFT H
 &mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp SEMICOLON  &kp LEFT_ALT                    &kp APOS       &kp G        &kp D  &kp M    &kp J  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_ime_off_esc 7 0  &lt 3 SPACE    &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                           &kp DEL
+&kp LCTRL         &kp LEFT_GUI  &kp SLASH  &lt_ime_off_esc 7 0  &lt 3 SPACE    &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                           &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
