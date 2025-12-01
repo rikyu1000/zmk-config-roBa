@@ -187,8 +187,8 @@
             bindings = <
 &kp Q             &kp L         &kp U      &kp COMMA                       &kp PERIOD                                                    &kp F        &kp W  &lt 6 R  &kp Y    &kp P
 &kp E             &kp I         &lt_mouse 8 A      &lt_mouse 9 O                           &kp SLASH      &switch_to_qwerty                           &kp COLON      &kp K        &kp T  &kp N    &kp S    &mt LEFT_SHIFT H
-&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp SEMICOLON  &kp LEFT_ALT                    &kp APOS       &kp G        &kp D  &kp M    &kp DOT  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_ime_off_esc 7 0  &lt 3 SPACE    &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                           &kp J
+&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp SEMICOLON  &kp LEFT_ALT                    &kp APOS       &kp G        &kp D  &kp M    &kp J  &kp B
+&kp LCTRL         &kp LEFT_GUI  &kp MINUS  &lt_ime_off_esc 7 0  &lt 3 SPACE    &lt 4 LC(SPACE)      &kp BACKSPACE  &lt 2 ENTER                           &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
