@@ -128,10 +128,12 @@
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
         lt_mouse: lt_mouse {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_MOUSE";
             bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -142,6 +144,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_IME_OFF_ESC";
             bindings = <&mo>, <&ime_off_esc>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -174,10 +177,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E      &kp R                           &kp T                                                       &kp Y        &kp U  &lt 6 I    &kp O    &kp P
-&kp A             &kp S         &lt_mouse 8 D      &lt_mouse 9 F                           &kp G        &switch_to_ohnishi                           &kp COLON      &kp H        &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp B        &kp LEFT_ALT                    &kp APOS       &kp N        &kp M  &kp COMMA  &kp DOT  &kp MINUS
-&kp LCTRL         &kp LEFT_GUI  &kp SLASH  &lt_ime_off_esc 7 0  &lt 3 SPACE  &kp LC(SPACE)      &kp BACKSPACE  &mt LEFT_SHIFT ENTER                             &kp DEL
+&kp Q             &kp W         &kp E          &kp R                &kp T                                               &kp Y                 &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &lt_mouse 7 D  &lt_mouse 8 F        &kp G        &switch_to_ohnishi      &kp COLON      &kp H                 &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp B        &kp LEFT_ALT            &kp APOS       &kp N                 &kp M  &kp COMMA  &kp DOT  &kp MINUS
+&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE  &kp LC(SPACE)           &kp BACKSPACE  &mt LEFT_SHIFT ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -185,10 +188,10 @@
 
         Ohnishi {
             bindings = <
-&kp Q             &kp L         &kp U      &kp COMMA                       &kp PERIOD                                                    &kp F        &kp W  &lt 6 R  &kp Y    &kp P
-&kp E             &kp I         &lt_mouse 8 A      &lt_mouse 9 O                           &kp MINUS      &switch_to_qwerty                           &kp COLON      &kp K        &kp T  &kp N    &kp S    &mt LEFT_SHIFT H
-&mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                           &kp SEMICOLON  &kp LEFT_ALT                    &kp APOS       &kp G        &kp D  &kp M    &kp J  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp SLASH  &lt_ime_off_esc 7 0  &lt 3 SPACE    &kp LC(SPACE)      &kp BACKSPACE  &mt LEFT_SHIFT ENTER                           &kp DEL
+&kp Q             &kp L         &kp U          &kp COMMA            &kp PERIOD                                           &kp F                 &kp W  &lt 5 R  &kp Y  &kp P
+&kp E             &kp I         &lt_mouse 7 A  &lt_mouse 8 O        &kp MINUS      &switch_to_qwerty      &kp COLON      &kp K                 &kp T  &kp N    &kp S  &mt LEFT_SHIFT H
+&mt LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp SEMICOLON  &kp LEFT_ALT           &kp APOS       &kp G                 &kp D  &kp M    &kp J  &kp B
+&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE    &kp LC(SPACE)          &kp BACKSPACE  &mt LEFT_SHIFT ENTER                         &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -196,7 +199,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &kp F1   &kp F2  &kp F3  &kp F4  &kp F5
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans   &trans                          &kp F12
@@ -212,17 +215,6 @@
 &mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans                   &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
-        };
-
-        ARROW {
-            bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
@@ -269,7 +261,5 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
-
-
     };
 };
