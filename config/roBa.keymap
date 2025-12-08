@@ -180,7 +180,7 @@
 &kp Q             &kp W         &kp E          &kp R                &kp T                                               &kp Y                 &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &lt_mouse 7 D  &lt_mouse 8 F        &kp G        &switch_to_ohnishi      &kp COLON      &kp H                 &kp J  &kp K      &kp L    &mt LEFT_SHIFT SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp B        &kp LEFT_ALT            &kp APOS       &kp N                 &kp M  &kp COMMA  &kp DOT  &kp MINUS
-&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE  &lt 2 LC(SPACE)           &kp BACKSPACE  &mt LEFT_SHIFT ENTER                             &kp DEL
+&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE  &lt 2 LC(SPACE)         &kp BACKSPACE  &mt LEFT_SHIFT ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -191,7 +191,7 @@
 &kp Q             &kp L         &kp U          &kp COMMA            &kp PERIOD                                           &kp F                 &kp W  &lt 5 R  &kp Y  &kp P
 &kp E             &kp I         &lt_mouse 7 A  &lt_mouse 8 O        &kp MINUS      &switch_to_qwerty      &kp COLON      &kp K                 &kp T  &kp N    &kp S  &mt LEFT_SHIFT H
 &mt LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp SEMICOLON  &kp LEFT_ALT           &kp APOS       &kp G                 &kp D  &kp M    &kp J  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE    &lt 2 LC(SPACE)          &kp BACKSPACE  &mt LEFT_SHIFT ENTER                         &kp DEL
+&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE    &lt 2 LC(SPACE)        &kp BACKSPACE  &mt LEFT_SHIFT ENTER                         &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -237,10 +237,10 @@
 
         Bluetooth {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &kp LS(LA(U))  &trans         &trans         &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &kp LS(LA(R))  &kp LS(LA(T))  &kp LS(LA(Y))  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &kp LA(LS(Q))  &kp LS(LA(W))  &kp LS(LA(E))  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans         &trans         &trans         &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
