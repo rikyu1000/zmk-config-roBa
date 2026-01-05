@@ -148,6 +148,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        mt_shift_pref: mt_shift_pref {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SHIFT_PREF";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+        };
     };
 
     trackball_listener {
@@ -189,9 +200,9 @@
         Ohnishi {
             bindings = <
 &kp Q             &kp L         &kp U          &kp COMMA            &kp PERIOD                                           &kp F                 &kp W  &lt 5 R  &kp Y  &kp P
-&kp E             &kp I         &lt_mouse 7 A  &lt_mouse 8 O        &kp MINUS      &switch_to_qwerty      &kp COLON      &kp K                 &kp T  &kp N    &kp S  &mt LEFT_SHIFT H
-&mt LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp SEMICOLON  &kp LEFT_ALT           &kp APOS       &kp G                 &kp D  &kp M    &kp J  &kp B
-&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE    &lt 2 LC(SPACE)        &kp BACKSPACE  &mt LEFT_SHIFT ENTER                         &kp DEL
+&kp E             &kp I         &lt_mouse 7 A  &lt_mouse 8 O        &kp MINUS      &switch_to_qwerty      &kp COLON      &kp K                 &kp T  &kp N    &kp S  &mt_shift_pref LEFT_SHIFT H
+&mt_shift_pref LEFT_SHIFT Z  &kp X         &kp C          &kp V                &kp SEMICOLON  &kp LEFT_ALT           &kp APOS       &kp G                 &kp D  &kp M    &kp J  &kp B
+&kp LCTRL         &kp LEFT_GUI  &kp SLASH      &lt_ime_off_esc 6 0  &lt 3 SPACE    &lt 2 LC(SPACE)        &kp BACKSPACE  &mt_shift_pref LEFT_SHIFT ENTER                         &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
